@@ -1,0 +1,38 @@
+<section>
+  <fieldset>
+    <label>  Ingrese Id del Alumno  </label>
+    <input type="number" [value]="Alumno.id" (input)="cId($event)">
+  </fieldset>
+  <fieldset>
+    <label>  Ingrese el rut del Alumno  </label>
+    <input type="text" [value]="Alumno.rut" (input)="cRut($event)">
+  </fieldset>
+  <fieldset>
+    <label>  Ingrese el Nombre del Alumno  </label>
+    <input type="text" [value]="Alumno.nombre" (input)="cNombre($event)">
+  </fieldset>
+  <fieldset>
+    <label>  Ingrese el Apellido del Alumno  </label>
+    <input type="text" [value]="Alumno.apellido" (input)="cApellido($event)">
+  </fieldset>
+  <fieldset>
+    <label>  Ingrese la edad del Alumno  </label>
+    <input type="number" [value]="Alumno.edad" (input)="cEdad($event)">
+  </fieldset>
+  <fieldset>
+    <label>  Seleccione la sección  </label>
+    <select [value]="Alumno.Seccion" (change)="cSeccion($event)">
+        <option
+        *ngFor="let variable of sct"
+        [value]="variable"
+
+        >
+
+              {{variable}}
+      </option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <button type="button"(click)="guardarElemento()"> Registrar Asistencia </button>
+  </fieldset>
+</section>
